@@ -305,8 +305,9 @@ Jika tidak ada masalah, maka CI/CD akan berjalan hingga menjalankan _deploy_ oto
 
 Sebelumnya anda telah melihat contoh _status badges_ di dokumen ini:
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=addianto_sitodo&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=addianto_sitodo)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=addianto_sitodo&metric=coverage)](https://sonarcloud.io/summary/new_code?id=addianto_sitodo)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lontas-git_sitodo-custom&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=lontas-git_sitodo-custom)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=lontas-git_sitodo-custom&metric=coverage)](https://sonarcloud.io/summary/new_code?id=lontas-git_sitodo-custom)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=lontas-git_sitodo-custom&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=lontas-git_sitodo-custom)
 
 _Status badges_ tersebut adalah indikator visual dari SonarCloud terhadap versi _upstream_ (asli) dari proyek Sitodo.
 Anda juga dapat membuat _status badges_ serupa pada salinan proyek Sitodo milik anda dengan kembali membuka laman proyek analisis proyek ini di SonarCloud, kemudian buka laman Information. Anda kemudian dapat memilih _badges_ untuk disalin ke dokumen `README.md` proyek Sitodo anda.
