@@ -49,57 +49,31 @@ import org.springframework.stereotype.Service;
 <span class="fc" id="L49">            output.append(fewItemsMessage);</span>
 
 <span class="fc" id="L51">            computeMotivationMessage(total, finished, output);</span>
-//            if (finished == total) {
-//                output.append(&quot; &quot;).append(allFinishedMessage);
-//            } else if (finished == 0) {
-//                output.append(&quot; &quot;).append(noFinishedMessage);
-//            } else if (finished &lt; total) {
-//                if (finished &gt;= total / 2) {
-//                    output.append(&quot; &quot;).append(halfFinishedMessage);
-//                } else {
-//                    output.append(someFinishedMessage);
-//                }
-//            } else {
-//                output.append(someFinishedMessage);
-//            }
         } else {
-<span class="fc" id="L66">            output.append(manyItemsMessage);</span>
+<span class="fc" id="L53">            output.append(manyItemsMessage);</span>
 
-<span class="fc" id="L68">            computeMotivationMessage(total, finished, output);</span>
-//            if (finished == total) {
-//                output.append(allFinishedMessage);
-//            } else if (finished == 0) {
-//                output.append(&quot; &quot;).append(noFinishedMessage);
-//            } else if (finished &lt; total) {
-//                if (finished &gt;= total / 2) {
-//                    output.append(&quot; &quot;).append(halfFinishedMessage);
-//                } else {
-//                    output.append(someFinishedMessage);
-//                }
-//            } else {
-//                output.append(someFinishedMessage);
-//            }
+<span class="fc" id="L55">            computeMotivationMessage(total, finished, output);</span>
         }
 
-<span class="fc" id="L84">        log.debug(&quot;Resulting output: {}&quot;, output.toString());</span>
+<span class="fc" id="L58">        log.debug(&quot;Resulting output: {}&quot;, output.toString());</span>
 
-<span class="fc" id="L86">        return output.toString();</span>
+<span class="fc" id="L60">        return output.toString();</span>
     }
 
     private void computeMotivationMessage(long total, long finished, StringBuilder output) {
-<span class="fc bfc" id="L90" title="All 2 branches covered.">        if (finished == total) {</span>
-<span class="fc" id="L91">            output.append(&quot; &quot;).append(allFinishedMessage);</span>
-<span class="fc bfc" id="L92" title="All 2 branches covered.">        } else if (finished == 0) {</span>
-<span class="fc" id="L93">            output.append(&quot; &quot;).append(noFinishedMessage);</span>
-<span class="pc bpc" id="L94" title="1 of 2 branches missed.">        } else if (finished &lt; total) {</span>
-<span class="fc bfc" id="L95" title="All 2 branches covered.">            if (finished &gt;= total / 2) {</span>
-<span class="fc" id="L96">                output.append(&quot; &quot;).append(halfFinishedMessage);</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (finished == total) {</span>
+<span class="fc" id="L65">            output.append(&quot; &quot;).append(allFinishedMessage);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        } else if (finished == 0) {</span>
+<span class="fc" id="L67">            output.append(&quot; &quot;).append(noFinishedMessage);</span>
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        } else if (finished &lt; total) {</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            if (finished &gt;= total / 2) {</span>
+<span class="fc" id="L70">                output.append(&quot; &quot;).append(halfFinishedMessage);</span>
             } else {
-<span class="fc" id="L98">                output.append(someFinishedMessage);</span>
+<span class="fc" id="L72">                output.append(someFinishedMessage);</span>
             }
         } else {
-<span class="nc" id="L101">            output.append(someFinishedMessage);</span>
+<span class="nc" id="L75">            output.append(someFinishedMessage);</span>
         }
-<span class="fc" id="L103">    }</span>
+<span class="fc" id="L77">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
