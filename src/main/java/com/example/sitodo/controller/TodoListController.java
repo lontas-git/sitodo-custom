@@ -21,6 +21,8 @@ public class TodoListController {
     private TodoListService todoListService;
 
     private MotivationMessageService motivationMessageService;
+    
+    private final static String MOTIVATION_MESSAGE_KEY = "motivationMessage";
 
     @Autowired
     public void setTodoListService(TodoListService todoListService) {
@@ -35,7 +37,7 @@ public class TodoListController {
     @GetMapping("/list")
     public String showList(Model model) {
         model.addAttribute("todoItemForm", new TodoItemForm());
-        model.addAttribute("motivationMessage", motivationMessageService.computeMotivationMessage(0, 0));
+        model.addAttribute(MOTIVATION_MESSAGE_KEY, motivationMessageService.computeMotivationMessage(0, 0));
 
         return "list";
     }
@@ -47,7 +49,7 @@ public class TodoListController {
 
         model.addAttribute("todoList", foundTodoList);
         model.addAttribute("todoItemForm", new TodoItemForm());
-        model.addAttribute("motivationMessage", motivationMessageService.computeMotivationMessage(foundTodoList.countTotal(), foundTodoList.countFinishedItems()));
+        model.addAttribute(MOTIVATION_MESSAGE_KEY, motivationMessageService.computeMotivationMessage(foundTodoList.countTotal(), foundTodoList.countFinishedItems()));
 
         return "list";
     }
@@ -75,7 +77,7 @@ public class TodoListController {
             log.debug("Show list with ID {}", foundTodoList.id());
 
             model.addAttribute("todoList", foundTodoList);
-            model.addAttribute("motivationMessage", motivationMessageService.computeMotivationMessage(foundTodoList.countTotal(), foundTodoList.countFinishedItems()));
+            model.addAttribute(MOTIVATION_MESSAGE_KEY, motivationMessageService.computeMotivationMessage(foundTodoList.countTotal(), foundTodoList.countFinishedItems()));
 
             return "list";
         }
