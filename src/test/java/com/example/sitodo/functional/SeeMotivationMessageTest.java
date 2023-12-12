@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 
+import com.codeborne.selenide.Selenide;
+
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -92,13 +94,14 @@ class SeeMotivationMessageTest extends BaseFunctionalTest {
         items.forEach(item -> {
             postNewTodoItem(item);
 
-            try {
-                // Introduce artificial delay allowing DOM to be correctly rendered after inserting
-                // multiple items consecutively
-                Thread.sleep(500);
-            } catch (InterruptedException exception) {
-                LOG.error("There was a problem during artificial delay", exception);
-            }
+//            try {
+//                // Introduce artificial delay allowing DOM to be correctly rendered after inserting
+//                // multiple items consecutively
+//                Thread.sleep(500);
+//            } catch (InterruptedException exception) {
+//                LOG.error("There was a problem during artificial delay", exception);
+//            }
+            Selenide.sleep(500);
         });
 
         // Check the initial motivation message
