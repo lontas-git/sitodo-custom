@@ -6,8 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,7 +29,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public abstract class BaseFunctionalTest {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BaseFunctionalTest.class);
+//    private static final Logger LOG = LoggerFactory.getLogger(BaseFunctionalTest.class);
 
     protected static final int DEFAULT_NUMBER_OF_COLUMNS = 4;
 
@@ -65,23 +65,23 @@ public abstract class BaseFunctionalTest {
 
         inputField.sendKeys(item, Keys.ENTER);
 
-        try {
-            // Introduce artificial delay allowing DOM to be correctly rendered after inserting
-            // multiple items consecutively
-            Thread.sleep(500);
-        } catch (InterruptedException exception) {
-            LOG.error("There was a problem during artificial delay", exception);
-        }
+//        try {
+//            // Introduce artificial delay allowing DOM to be correctly rendered after inserting
+//            // multiple items consecutively
+//            Thread.sleep(500);
+//        } catch (InterruptedException exception) {
+//            LOG.error("There was a problem during artificial delay", exception);
+//        }
     }
 
     protected void checkItemsInList(List<String> expectedItems) {
-        try {
-            // Introduce artificial delay allowing DOM to be correctly rendered after inserting
-            // multiple items consecutively
-            Thread.sleep(500);
-        } catch (InterruptedException exception) {
-            LOG.error("There was a problem during artificial delay", exception);
-        }
+//        try {
+//            // Introduce artificial delay allowing DOM to be correctly rendered after inserting
+//            // multiple items consecutively
+//            Thread.sleep(500);
+//        } catch (InterruptedException exception) {
+//            LOG.error("There was a problem during artificial delay", exception);
+//        }
 
         $(By.tagName("tbody")).findAll(By.tagName("tr"))
             .shouldHave(CollectionCondition.size(expectedItems.size()))

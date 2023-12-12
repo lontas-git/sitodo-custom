@@ -22,7 +22,7 @@ public class TodoListController {
 
     private MotivationMessageService motivationMessageService;
     
-    private final static String MOTIVATION_MESSAGE_KEY = "motivationMessage";
+    private static final String MOTIVATION_MESSAGE_KEY = "motivationMessage";
 
     @Autowired
     public void setTodoListService(TodoListService todoListService) {
