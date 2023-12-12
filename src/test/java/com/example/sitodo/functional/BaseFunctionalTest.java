@@ -1,6 +1,8 @@
 package com.example.sitodo.functional;
 
 import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.Selenide;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
@@ -72,6 +74,7 @@ public abstract class BaseFunctionalTest {
 //        } catch (InterruptedException exception) {
 //            LOG.error("There was a problem during artificial delay", exception);
 //        }
+        Selenide.sleep(500);
     }
 
     protected void checkItemsInList(List<String> expectedItems) {
@@ -82,6 +85,7 @@ public abstract class BaseFunctionalTest {
 //        } catch (InterruptedException exception) {
 //            LOG.error("There was a problem during artificial delay", exception);
 //        }
+        Selenide.sleep(500);
 
         $(By.tagName("tbody")).findAll(By.tagName("tr"))
             .shouldHave(CollectionCondition.size(expectedItems.size()))
